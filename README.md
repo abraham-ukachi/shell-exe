@@ -54,6 +54,13 @@ Here is a list of all the jobs for to this project, their main `.sh` script, and
 > NOTE: Each **Job** contains a `README.md` & `package.json` file.  
 
 
+## Sub projects
+
+The following github projects were inspired by this `Shell-exe` project:
+
+* [csv-random-generator](https://github.com/abraham-ukachi/csv-random-generator)
+
+> NOTE: All the above projects will be writing 100% in Shell (ie. `bash` or `zsh`).
 
 ## TODOs
 
