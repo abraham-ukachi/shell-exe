@@ -1,0 +1,12 @@
+{
+    "name": "Job8",
+    "version": "0.0.1",
+    "description": "Get logs",
+    "author": {
+        "name": "Abraham Ukachi",
+        "email": "abraham.ukachi@laplateforme.io",
+        "url": "https://github.com/abraham-ukachi"
+    },
+    "private": false
+
+}

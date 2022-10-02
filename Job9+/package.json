@@ -1,0 +1,13 @@
+{
+    "name": "csv-random-generator",
+    "short_name": "crangen",
+    "version": "0.0.1",
+    "description": "",
+    "author": {
+        "name": "Abraham Ukachi",
+        "email": "abraham.ukachi@laplateforme.io",
+        "url": "https://github.com/abraham-ukachi"
+    },
+    "private": false
+
+}
