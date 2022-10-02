@@ -1,23 +1,16 @@
 # `shell-exe`
 > IMPORTANT: This is a school project and all the [Jobs](#Jobs) have been made **public**.
 
-**Yess!!! Finally, some <code>. Hurrrayyy!!!**
-After ~2 weeks of practical/hardware & OS related projects, we've finally started writing some <code> 🎉🎊🥳
+**Yess!!! Finally, some `code`. Hurrrayyy!!!** \
+After ~2 weeks of practical/hardware & OS related projects, we've finally started writing some `code` 🎉🎊🥳
  
  
 ## Description
-> Original text in French: 
-> N’avez-vous jamais rêvé de réaliser plusieurs tâches en une seule ? 
-> D’éviter> les tâches redondantes ?
-> 
-> Nous avons la solution!
-> 
-> LES SCRIPTS
-> 
-> Les scripts shell peuvent être de simples instructions ou bien un 
-> bout de code qui exécute une ou plusieurs tâches.
+> Original text in French: \
+> N’avez-vous jamais rêvé de réaliser plusieurs tâches en une seule ? D’éviter les tâches redondantes ? \
+> Nous avons la solution! LES SCRIPTS \
+> Les scripts shell peuvent être de simples instructions ou bien un bout de code qui exécute une ou plusieurs tâches.\
 > C’est parti…
-> 
 
 Have you ever dreamed of performing multiple tasks in one? Avoiding redundant tasks?
 
