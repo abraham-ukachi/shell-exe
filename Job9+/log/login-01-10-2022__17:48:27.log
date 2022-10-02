@@ -1,0 +1,20 @@
+<HTML><BODY><H2>Browser error!</H2>Browser does not support redirects!</BODY>
+<!--
+<?xml version="1.0" encoding="UTF-8"?>
+<WISPAccessGatewayParam
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="http://www.wballiance.net/wispr_2_0.xsd">
+<Redirect>
+<MessageType>100</MessageType>
+<ResponseCode>0</ResponseCode>
+<VersionHigh>2.0</VersionHigh>
+<VersionLow>1.0</VersionLow>
+<AccessProcedure>1.0</AccessProcedure>
+<LoginURL>https://alcasar.laplateforme.io/intercept.php?res=wispr&amp;uamip=10.10.0.1&amp;uamport=3990&amp;challenge=04fb6915b21afe2f84f7b5e0e6809a29</LoginURL>
+<AbortLoginURL>http://10.10.0.1:3990/abort</AbortLoginURL>
+<EAPMsg>AQEABQE=</EAPMsg>
+</Redirect>
+</WISPAccessGatewayParam>
+-->
+
+</HTML>

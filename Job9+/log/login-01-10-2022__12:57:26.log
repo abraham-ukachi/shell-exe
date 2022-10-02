@@ -1,0 +1,15 @@
+<HTML><BODY><H2>Browser error!</H2>Browser does not support redirects!</BODY>
+<!--
+<?xml version="1.0" encoding="UTF-8"?>
+<WISPAccessGatewayParam
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="http://www.wballiance.net/wispr_2_0.xsd">
+<AuthenticationPollReply>
+<MessageType>140</MessageType>
+<ResponseCode>100</ResponseCode>
+<ReplyMessage>Login failed</ReplyMessage>
+</AuthenticationPollReply>
+</WISPAccessGatewayParam>
+-->
+
+</HTML>
