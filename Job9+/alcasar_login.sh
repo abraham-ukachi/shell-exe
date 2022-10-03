@@ -128,12 +128,12 @@ else
 fi
 
 # username: abraham.ukachi@laplateforme.ip
-# password: b48cd0656c14a4e0cd57c57475 (jesuschrist)
+# password: *******
 #
 # curl -X POST https://alcasar.laplateforme.io/intercept.php
 #   -H "Content-Type: application/x-www-form-urlencoded"
 #   -d "challenge=25846dfdb8e4e1ad527a6c6bd3d2fd57
 #   &userurl=http://www.euronews.com/
 #   &username=abraham.ukachi@laplateforme.io
-#   &password=jesuschrist
+#   &password=***********
 #   &button=Authentication"
