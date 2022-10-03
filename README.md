@@ -40,9 +40,9 @@ Here is a list of all the jobs for to this project, their main `.sh` script, and
 
 | No. | Name | Script | Status |
 | --- | ---- | ------ | ------ |
-| 1 | [*`Job1`*](Job1) | **myfirstscript.sh** | [Ready](./Job1/myfirstscript.sh) |
-| 2 | [*`Job2`*](Job2) | **myupdate.sh** | [Ready](./Job2/myupdate.sh) |
-| 3 | [*`Job3`*](Job3) | **add.sh** | *Working* |
+| 1 | [*`Job1`*](Job1) | **myfirstscript.sh** | [Done](./Job1/myfirstscript.sh) |
+| 2 | [*`Job2`*](Job2) | **myupdate.sh** | [Done](./Job2/myupdate.sh) |
+| 3 | [*`Job3`*](Job3) | **add.sh** | *In progress* |
 | 4 | *`Job4`* | **argument.sh** | Pending |
 | 5 | *`Job5`* | **hello_bye.sh** | Pending |
 | 6 | *`Job6`* | **my_calculator.sh** | Pending |
