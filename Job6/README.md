@@ -1,25 +1,40 @@
-# Job 9
+# Job 2
 > - Author: [Abraham Ukachi](https://github.com/abraham-ukachi) 
-> - Subject: **Shell-exe**
+> - Subject:[Shell-exe](https://github.com/abraham-ukachi/shell-exe)
 > - School: [LaPlateforme\_](https://laplateforme.io)
-> - Script: [accessrights.sh](./accessrights.sh)
+> - Script: [myupdate.sh](./myupdate.sh)
+
+
 
 ## Description
+  
 
-Créer un script nommé accessrights.sh qui depuis ce fichier CSV, récupère les informations des utilisateurs et les crée sur votre système. Si l’utilisateur est un admin., donnez-lui le rôle de super utilisateur de votre système Pour la suite, utilisez les cron pour permettre au script de se relancer automatiquement s'il y a un changement dans le fichier CSV. (Pour tester, je vous invite à modifier le fichier à la main).
+
+
+
+## Command line usage
+
+```sh
+
+```
+
+
+## Results
+> NOTE: These are some giphy captures
+
+![Giphy Capture 1](./.screenshots/giphy_capture1.gif)
+
+
 
 ## Issues
 
 Not Yet :)
 
+
+
 ## TODOs
 
-- [ ] Optimize the [accessrights.sh](./accessrights.sh) script
+- [ ] Optimize the [myupdate.sh](./myupdate.sh) script
 - [ ] Remove unwanted comments
 
-
-        
-                
-        
-        
-        
+  
