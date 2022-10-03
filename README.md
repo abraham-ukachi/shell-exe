@@ -42,8 +42,8 @@ Here is a list of all the jobs for to this project, their main `.sh` script, and
 | --- | ---- | ------ | ------ |
 | 1 | [*`Job1`*](Job1) | **myfirstscript.sh** | [Done](./Job1/myfirstscript.sh) |
 | 2 | [*`Job2`*](Job2) | **myupdate.sh** | [Done](./Job2/myupdate.sh) |
-| 3 | [*`Job3`*](Job3) | **add.sh** | *In progress* |
-| 4 | *`Job4`* | **argument.sh** | Pending |
+| 3 | [*`Job3`*](Job3) | **add.sh** | [Done](./Job3/add.sh) |
+| 4 | [*`Job4`*](Job4) | **argument.sh** | *In progress* |
 | 5 | *`Job5`* | **hello_bye.sh** | Pending |
 | 6 | *`Job6`* | **my_calculator.sh** | Pending |
 | 7 | *`Job7`* | **my_loop.sh** | Pending |
