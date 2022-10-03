@@ -1,6 +1,6 @@
 # Job 1
 > - Author: [Abraham Ukachi](https://github.com/abraham-ukachi) 
-> - Subject: **Shell-exe**
+> - Subject:[Shell-exe](https://github.com/abraham-ukachi/shell-exe)
 > - School: [LaPlateforme\_](https://laplateforme.io)
 > - Script: [myfirstscript.sh](./myfirstscript.sh)
 
@@ -12,14 +12,14 @@ En ligne de commande : \
 Créer un fichier nommé myfirstscript.sh, écrivez à l'intérieur votre premier script : \
 `echo` “i’m a script”\
 Le mot clé “echo” permet d’afficher un texte et bien d’autres choses que vous verrez par
-la suite…\
+la suite…
 
 Il faut maintenant donner les droits d'exécution à votre utilisateur. Une fois les droits
-donnés, exécutez votre script.\
+donnés, exécutez votre script.
 
 
 
-## Command line examples
+## Command line usage
 
 ```sh
 chmod +x myfirstscript.sh
@@ -31,7 +31,8 @@ chmod +x myfirstscript.sh
 ```
 
 
-## Some giphy captures
+## Results
+> NOTE: These are some giphy captures
 
 ### Making *myfirstscript.sh* file executable and running it
 ![Giphy Capture 1](./.screenshots/giphy_capture1.gif)
