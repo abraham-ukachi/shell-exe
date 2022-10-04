@@ -16,9 +16,15 @@
 # Vous devez obligatoirement utiliser les boucles pour réaliser ce script.
 # ----------------------------
 
+# Define the message and number variables
+# as `msg` and `num` respectively.
+msg="Je suis un script qui arrive a fair un boucle"
+num=0
 
+# From 1 to 10...
 for num in {1..10}; do
-    echo "Je suis un script qui arrive a faire une boucle $num";
+    # ...print the message followed 
+    # by an incrementing yellow number ;)
+    printf "%s \x1b[33m%s\x1b[0m\n" $msg $num
 done
-
 
