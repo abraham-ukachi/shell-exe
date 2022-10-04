@@ -45,8 +45,8 @@ Here is a list of all the jobs for to this project, their main `.sh` script, and
 | 3 | [*`Job3`*](Job3) | **add.sh** | [Done](./Job3/add.sh) |
 | 4 | [*`Job4`*](Job4) | **argument.sh** | [Done](./Job4/add.sh) |
 | 5 | [*`Job5`*](Job5) | **hello_bye.sh** | [Done](./Job5/hello_bye.sh) |
-| 6 | [*`Job6`*](Job6) | **my_calculator.sh** | *In progress* |
-| 7 | *`Job7`* | **my_loop.sh** | Pending |
+| 6 | [*`Job6`*](Job6) | **my_calculator.sh** | [Done](./Job6/my_calculator.sh) |
+| 7 | [*`Job7`*](Job7) | **my_loop.sh** | *In progress* |
 | 8 | *`Job8`* | **get_logs.sh** | Pending |
 | 9 | *`Job9`* | **accessrights.sh** | Pending |
 | 10 | *`Job9+`* | **alcasar_login.sh** | Pending |
