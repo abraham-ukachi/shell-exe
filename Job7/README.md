@@ -2,7 +2,7 @@
 > - Author: [Abraham Ukachi](https://github.com/abraham-ukachi) 
 > - Subject:[Shell-exe](https://github.com/abraham-ukachi/shell-exe)
 > - School: [LaPlateforme\_](https://laplateforme.io)
-> - Script: [accessrights.sh](./myloop.sh)
+> - Script: [myloop.sh](./myloop.sh)
 
 
 
@@ -22,12 +22,12 @@
 
 It is now time to glimpse the world of loops. To do this, you will create a script named myloop.sh that will display 10 times the following sentence and display at the end of the sentence a number that increments each time: 
 
-“I am a script that manages to make a loop 1” 
-“I am a script that manages to make a loop 2” 
-“I am a script that manages to make a loop 3” 
-“I am a script that manages to make a loop 4”
-. . . .
-“I am a script that manages to make a loop 10” 
+- “I am a script that manages to make a loop 1” 
+- “I am a script that manages to make a loop 2” 
+- “I am a script that manages to make a loop 3” 
+- “I am a script that manages to make a loop 4”
+- . . . .
+- “I am a script that manages to make a loop 10” 
 
 You must use the loops to make this script.
 
