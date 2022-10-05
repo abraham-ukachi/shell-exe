@@ -16,7 +16,8 @@
 
 # Initializing some "ALCASAR" constants...:)
 
-URL="https://alcasar.laplateforme.io/intercept.php"
+URL="https://alcasar.laplateforme.io/intercept.php" # <- recently added just for testing purposes :(
+
 ALCASAR_URL="https://alcasar.laplateforme.io"
 ALCASAR_PORT=3991
 ALCASAR_LOGIN_URL="$ALCASAR_URL:$ALCASAR_PORT/intercept.php" # <- intercept.php or logon ?
