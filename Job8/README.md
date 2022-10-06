@@ -44,8 +44,9 @@ crontab macron
 Or just execute the script from the current directory:
 
 ```sh
-./get_logs.sh
+./get_logs.sh --keep-file
 ```
+> `--keep-file`: This option keeps or NOT delete the **'.txt'** file after **'.tar'** has been saved in **Backup**. 
 
 
 
