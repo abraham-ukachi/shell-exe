@@ -15,6 +15,12 @@
 > s'il y a un changement dans le fichier CSV. (Pour tester, je vous invite à modifier le fichier à la main).
 
 
+Create a script named **accessrights.sh** that from this CSV file, retrieves user \
+information and creates it on your system. If the user is an admin, give him/her the \
+role of super user of your system For the following, use cron to allow the script to \
+restart automatically if there is a change in the CSV file. 
+(To test, I'd like you to modify the file manually).
+
 
 
 ## Command line usage
@@ -25,52 +31,6 @@
 ```
 > NOTE:
 
-
-
-## Tips
-
-These are a couple of **coding tips** related or birthed from this [job](#Job9):
-
-### Tip 1 - Run the commands below to check if a user is a sudoer or currently has admin privileges:
-
-```sh
-sudo -l -U john
-```
-![Screenshot of Tip1](./.screenshots/screenshot_tip1.1.png)
-
-> NOTE: **john** is NOT a sudoer.
-
-```sh
-sudo -l -U clarke
-```
-![Screenshot of Tip1](./.screenshots/screenshot_tip1.2.png)
-
-> NOTE: **clarke** is a sudoer.
-
-To learn more about *sudoers*, read this [wiki page from the Ubuntu community](https://help.ubuntu.com/community/Sudoers).
-
-
-### Tip 2 - Run the command below to view a **'.csv'** file (ie. *Shell_Userlist.csv*) in a tabulated form:
-
-```sh
-csvlook Shell_Userlist.csv
-```
-
-![Screenshot of Tip2](./.screenshots/screenshot_tip2.png)
-
-> NOTE: You must have `csvlook` already installed.
-
-## modicron
-
-
-The [modicron file](modicron), located in this directory, is used to schedule a cron job with `crontab` that monitors a `.csv` file like [Shell_Userlist.csv](Shell_Userlist.csv) for any changes, and if the `.csv` file is altered or **modi**fied in anyway, the [accessrights.sh](accessrights.sh) script will be executed automatically. Sick, huh 😎? 
-
-Enable [modicron](modicron) by entering the following command in a terminal:
-
-```sh
-crontab modicon
-```
-> NOTE: You should execute the above command from this [Job9](#Job9) folder.
 
 ## Results
 > NOTE: These are some giphy captures
@@ -89,6 +49,18 @@ crontab modicon
 ```
 ![Giphy Capture 2 - Delete users from macOS](./.screenshots/giphy_capture_2.gif)
 
+
+## modicron
+
+
+The [modicron file](modicron), located in this directory, is used to schedule a cron job with `crontab` that monitors a `.csv` file like [Shell_Userlist.csv](Shell_Userlist.csv) for any changes, and if the `.csv` file is altered or **modi**fied in anyway, the [accessrights.sh](accessrights.sh) script will be executed automatically. Sick, huh 😎? 
+
+Enable [modicron](modicron) by entering the following command in a terminal:
+
+```sh
+crontab modicon
+```
+> NOTE: You should execute the above command from this [Job9](#Job9) folder.
 
 
 ## OS Support
@@ -129,3 +101,35 @@ Not Yet ;)
 
 
 
+## Tips
+
+These are a couple of **coding tips** related or birthed from this [job](#Job9):
+
+### Tip 1 - Run the commands below to check if a user is a sudoer or currently has admin privileges:
+
+```sh
+sudo -l -U john
+```
+![Screenshot of Tip1](./.screenshots/screenshot_tip1.1.png)
+
+> NOTE: **john** is NOT a sudoer.
+
+```sh
+sudo -l -U clarke
+```
+![Screenshot of Tip1](./.screenshots/screenshot_tip1.2.png)
+
+> NOTE: **clarke** is a sudoer.
+
+To learn more about *sudoers*, read this [wiki page from the Ubuntu community](https://help.ubuntu.com/community/Sudoers).
+
+
+### Tip 2 - Run the command below to view a **'.csv'** file (ie. *Shell_Userlist.csv*) in a tabulated form:
+
+```sh
+csvlook Shell_Userlist.csv
+```
+
+![Screenshot of Tip2](./.screenshots/screenshot_tip2.png)
+
+> NOTE: You must have `csvlook` already installed.
