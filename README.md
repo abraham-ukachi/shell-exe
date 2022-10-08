@@ -48,8 +48,8 @@ Here is a list of all the jobs for to this project, their main `.sh` script, and
 | 6 | [*`Job6`*](Job6) | **my_calculator.sh** | [Done](./Job6/my_calculator.sh) |
 | 7 | [*`Job7`*](Job7) | **myloop.sh** | [Done](./Job7/myloop.sh) |
 | 8 | [*`Job8`*](Job8) | **get_logs.sh** | [Done](./Job8/get_logs.sh) |
-| 9 | [*`Job9`*](Job9) | **accessrights.sh** | **In progress** |
-| 10 | *`Job9+`* | **alcasar_login.sh** | Pending |
+| 9 | [*`Job9`*](Job9) | **accessrights.sh** | [Done](./Job9/accessrights.sh) |
+| 10 | [*`Job9+`*](Job9+) | **alcasar_login.sh** | **In progress** |
 
 > NOTE: Each **Job** contains a `README.md` & `package.json` file.  
 
