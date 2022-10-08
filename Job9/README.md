@@ -53,7 +53,7 @@ The [modicron file](modicron), located in this directory, is used to schedule a 
 Enable *modicron* by entering the following command in a terminal:
 
 ```sh
-crontab modicon
+crontab modicron
 ```
 > NOTE: You should execute the above command from this [Job9](#Job9) folder. 
 
@@ -94,8 +94,8 @@ Not Yet ;)
 - [ ] Add all users with `role = 'Admin'` to an **admin_list** array.
 - [ ] Print out the total number of users created 
 - [ ] Print out the total number of users deleted
-- [ ] In `user_create_macos` function, do nothing if the user already exists.
-- [ ] In `user_delete_macos` function, do nothing if the user has already been deleted.
+- [ ] In `create_user_macos` function, do nothing if the user already exists.
+- [ ] In `delete_usermacos` function, do nothing if the user has already been deleted.
 - [ ] Trim the users' firstname/prenom
 - [ ] Add [OS Support](#OS_Support) for [Debian](https://debian.org) and [Ubuntu](https://ubuntu.com)  
 - [ ] Remove unwanted comments.
