@@ -41,9 +41,11 @@ function create_user_macos {
     username="${prenom:l}" # On `bash`, it would be => ${prenom,,} 
     # Let's trim the username (ie. remove any leading and/or trailing space - aka.: whitespace)
     username=`echo $username | sed 's/ //g'` 
-
+    
     # TODO: Trim the users' firstname/prenom
     
+    # TODO: Do nothing if user already exists
+
     # Creating a new user on macOS... 
     # TODO: Create a home directory for this new user (ie. NFSHOMEDIRECTORY) 
     
@@ -91,6 +93,8 @@ function delete_user_macos {
     # Trim the username AGAIN ;)
     username=`echo $username | sed 's/ //g'`
     
+    # TODO: Do nothing if the user has already been deleted
+
     # Delete the user
     sudo dscl . -delete "/Users/$username"
 
@@ -110,12 +114,19 @@ do
         delete_user_macos $id $prenom $nom
 
         # TODO: Print out the total number of users deleted
+        
+        # Update the logs
+        echo "|> $(date -R) <| [-] (User Removed): ${prenom:l}" >> .logs.txt
+
     else
         # However, if there's no "-r" option...
         # Create a user on macOS  with the given `id`, `prenom`, `nom` and `m`
         create_user_macos $id $prenom $nom $mdp $role
 
         # TODO: Print out the total number of users created
+        
+        # Update the logs
+        echo "|> $(date -R) <| [+] (New User): ${prenom:l}" >> .logs.txt
     fi
 
 done < <(cat -v $CSV_FILE | tail -n +2 | sed 's/\^M//g') 
