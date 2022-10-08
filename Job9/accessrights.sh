@@ -9,46 +9,17 @@
 # s'il y a un changement dans le fichier CSV. (Pour tester, je vous invite à modifier le fichier à la main).
 # -------------------------
 
+
 # Create a constant CSV_FILE
 # If the first argument (ie. $1) is empty, use 'Shell_Userlist.csv' instead; 
 # However, if the first argument it is NOT empty, use it obv :)
 CSV_FILE=`if [[ -z $1 ]]; then echo 'Shell_Userlist.csv'; else echo $1; fi`
 # ^^^DO THIS MAYBE: CSV_FILE=`[[ -z $1 ]] && echo 'Shell_Userlist.csv' || echo $1'`
 
-# Get the content of the csv file
-# CSV_FILE_CONTENT=`cat $CSV_FILE`
-
 # TODO: Create an option (-r or --remove) to delete all previously created users.
 DELETE_USER_OPT=$2
 
 # TODO: Create and `admin_list` array
-
-
-# Do nothing if the csv file doesn't exist
-# if [[ -f $CSV_FILE ]]; then
-#    exit 1;
-# fi
-
-
-# Returns 0 (true) if the user is an administrator
-# HACK: This is temp solution to a problem. FIND ANOTHER WAY !!!
-# - param_1: id
-# function check_admin_by_id {
-#    local id=$1
-#    
-#    result=`cat $CSV_FILE | grep $id | grep Admin`
-#    
-#    [[ -z $result ]] && return false || return true
-#
-#    # If the result is empty ...
-#    # if [[ -z $result ]]; then
-#    #    # ...return 0 (true) 'cause the user is an admin
-#    #    return true;
-#    # fi
-#    
-#    # return 1
-# }
-#
 
 
 # TODO: Create a `create_user` function that can create a user on Debian and Ubuntu.
@@ -70,6 +41,8 @@ function create_user_macos {
     username="${prenom:l}" # On `bash`, it would be => ${prenom,,} 
     # Let's trim the username (ie. remove any leading and/or trailing space - aka.: whitespace)
     username=`echo $username | sed 's/ //g'` 
+
+    # TODO: Trim the users' firstname/prenom
     
     # Creating a new user on macOS... 
     # TODO: Create a home directory for this new user (ie. NFSHOMEDIRECTORY) 
@@ -86,18 +59,6 @@ function create_user_macos {
     # TODO: Use the given `id` as primary group ID too ?
     sudo dscl . -create "/Users/$username" PrimaryGroupID 20 
     
-    # role=`echo $`
-    # echo -n "echo -n role >>> --$role-- [${#role}]\n"
-    # sleep 2
-    # echo "echo role => --$role-- [${#role}]"
-
-    # echo "$username is an adminstrator $role]" >> access_logs.txt
-    
-    # is_admin=`check_admin_by_id $id`
-
-    # role_len=`echo $role | wc -m`
-    # echo "$role => $role_len"
-
     # If this user's role is 'Admin'...
     if [[ $role == 'Admin' ]]; then
         # ...make him/her a 'sudoer'(ie. add the user to the 'admin' group)
@@ -143,13 +104,6 @@ function delete_user_macos {
 # BUG: role is not behaving propery because of the 'invisible' "\r" trailing in each line 
 while IFS="," read -r id prenom nom mdp role
 do
-    # Do nothing or continue to the next loop,
-    # if the value of `id` is `Id` (ie. the header or first line)
-    # if [[ $id == "Id" ]]; then
-    #    continue
-    # fi
-    
-    
     # If a delete user option was given (ie. "-r")...
     if [[ $DELETE_USER_OPT == "-r" ]]; then
         # ...delete this user
