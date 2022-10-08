@@ -31,11 +31,24 @@
 
 These are a couple of **coding tips** related or birthed from this [job](#Job9):
 
-### Tip 1 - Run the command below to check if **Clarke** - a new user - is a sudoer or currently has admin privileges:
+### Tip 1 - Run the commands below to check if a user is a sudoer or currently has admin privileges:
 
 ```sh
-sudo -l -U Clarke
+sudo -l -U john
 ```
+![Screenshot of Tip1](./.screenshots/screenshot_tip1.1.png)
+
+> NOTE: **john** is NOT a sudoer.
+
+```sh
+sudo -l -U clarke
+```
+![Screenshot of Tip1](./.screenshots/screenshot_tip1.2.png)
+
+> NOTE: **clarke** is a sudoer.
+
+To learn more about *sudoers*, read this [wiki page from the Ubuntu community](https://help.ubuntu.com/community/Sudoers).
+
 
 ### Tip 2 - Run the command below to view a **'.csv'** file (ie. *Shell_Userlist.csv*) in a tabulated form:
 
@@ -43,27 +56,37 @@ sudo -l -U Clarke
 csvlook Shell_Userlist.csv
 ```
 
+![Screenshot of Tip2](./.screenshots/screenshot_tip2.png)
+
 > NOTE: You must have `csvlook` already installed.
 
 ## modicron
 
 
-The [modicron file](modicron), located in this directory, is used to schedule a cron job with `crontab` that monitors a `.csv` file like [Shell_Userlist.csv](Shell_Userlist.csv) for any changes, and if the `.csv` file is altered or **modi**fied in anyway, the [accessrights.sh](accessrights.sh) script will be executed automatically. Sick, huh 😎? :) 
+The [modicron file](modicron), located in this directory, is used to schedule a cron job with `crontab` that monitors a `.csv` file like [Shell_Userlist.csv](Shell_Userlist.csv) for any changes, and if the `.csv` file is altered or **modi**fied in anyway, the [accessrights.sh](accessrights.sh) script will be executed automatically. Sick, huh 😎? 
 
 Enable [modicron](modicron) by entering the following command in a terminal:
 
 ```sh
 crontab modicon
-``` 
+```
 > NOTE: You should execute the above command from this [Job9](#Job9) folder.
 
 ## Results
 > NOTE: These are some giphy captures
 
 ### Creating users on macOS using a `.csv` file
+```sh
+./accessrights.sh Shell_Userlist.csv
+```
+
 ![Giphy Capture 1 - Create users on macOS](./.screenshots/giphy_capture_1.gif)
 
 ### Deleting users from macOS using a `.csv` file
+
+```sh
+./accessrights.sh Shell_Userlist.csv -r
+```
 ![Giphy Capture 2 - Delete users from macOS](./.screenshots/giphy_capture_2.gif)
 
 
@@ -97,7 +120,8 @@ Not Yet ;)
 - [ ] Use the given **`id`** as primary group ID too ? 
 - [ ] Add all users with `role = 'Admin'` to an **admin_list** array.
 - [ ] Print out the total number of users created 
-- [ ] Print out the total number of users created
+- [ ] Print out the total number of users deleted
+- [ ] Trim the users' firstname/prenom
 - [ ] Add [OS Support](#OS_Support) for [Debian](https://debian.org) and [Ubuntu](https://ubuntu.com)  
 - [ ] Remove unwanted comments.
 - [ ] Optimize the [accessrights.sh](./accessrights.sh) script.
