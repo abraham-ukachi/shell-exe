@@ -1,1 +1,7 @@
+# `modicron`
+
+* * * * * cd /Users/abrahamukachi/LaPlateforme_/Projects/git-github/shell-exe/Job9 && modifound=`find Shell_Userlist.csv -mmin -1` && [[ ${#modifound} > 0 ]] && ./accessrights.sh Shell_Userlist.csv
+
+# ^^^^^ The `-mmin -1` (option) tells `find` to return our csv file (ie. Shell_Userlist.csv) \
+#       only if it has been modified in the last 60 seconds or 1 minute. 
 
