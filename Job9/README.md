@@ -15,11 +15,7 @@
 > s'il y a un changement dans le fichier CSV. (Pour tester, je vous invite à modifier le fichier à la main).
 
 
-Create a script named **accessrights.sh** that from this CSV file, retrieves user \
-information and creates it on your system. If the user is an admin, give him/her the \
-role of super user of your system For the following, use cron to allow the script to \
-restart automatically if there is a change in the CSV file. 
-(To test, I'd like you to modify the file manually).
+Create a script named **accessrights.sh** that from this CSV file, retrieves user information and creates it on your system. If the user is an admin, give him/her the role of super user of your system For the following, use cron to allow the script to restart automatically if there is a change in the CSV file. (To test, I'd like you to modify the file manually).
 
 
 
@@ -27,13 +23,12 @@ restart automatically if there is a change in the CSV file.
 
 
 ```sh
-./accessrights.sh
+./accessrights.sh [file] [option]
 ```
-> NOTE:
-
 
 ## Results
-> NOTE: These are some giphy captures
+
+These are some giphy captures:
 
 ### Creating users on macOS using a `.csv` file
 ```sh
@@ -50,18 +45,24 @@ restart automatically if there is a change in the CSV file.
 ![Giphy Capture 2 - Delete users from macOS](./.screenshots/giphy_capture_2.gif)
 
 
-## modicron
 
+## modicron
 
 The [modicron file](modicron), located in this directory, is used to schedule a cron job with `crontab` that monitors a `.csv` file like [Shell_Userlist.csv](Shell_Userlist.csv) for any changes, and if the `.csv` file is altered or **modi**fied in anyway, the [accessrights.sh](accessrights.sh) script will be executed automatically. Sick, huh 😎? 
 
-Enable [modicron](modicron) by entering the following command in a terminal:
+Enable *modicron* by entering the following command in a terminal:
 
 ```sh
 crontab modicon
 ```
-> NOTE: You should execute the above command from this [Job9](#Job9) folder.
+> NOTE: You should execute the above command from this [Job9](#Job9) folder. 
 
+### Inside Modicron
+
+```txt
+* * * * * cd /path/to/Job9 && modifound=`find Shell_Userlist.csv -mmin -1` && [[ ${#modifound} > 0 ]] && ./accessrights.sh Shell_Userlist.csv
+```
+> The `-mmin -1` (option) tells `find` to return our csv file (ie. **Shell_Userlist.csv**) only if it has been modified in the last 60 seconds or 1 minute. You can check the [logs](.logs) to see if the **accessrights.sh** script was run by [modicron](#modicron) successfully.
 
 ## OS Support
 
@@ -93,6 +94,8 @@ Not Yet ;)
 - [ ] Add all users with `role = 'Admin'` to an **admin_list** array.
 - [ ] Print out the total number of users created 
 - [ ] Print out the total number of users deleted
+- [ ] In `user_create_macos` function, do nothing if the user already exists.
+- [ ] In `user_delete_macos` function, do nothing if the user has already been deleted.
 - [ ] Trim the users' firstname/prenom
 - [ ] Add [OS Support](#OS_Support) for [Debian](https://debian.org) and [Ubuntu](https://ubuntu.com)  
 - [ ] Remove unwanted comments.
