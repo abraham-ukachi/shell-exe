@@ -39,7 +39,8 @@ function create_user_macos {
     
     # Create a lowercased username with the given `prenom`
     username="${prenom:l}" # On `bash`, it would be => ${prenom,,} 
-    # Let's trim the username (ie. remove any leading and/or trailing space - aka.: whitespace)
+    # Let's trim the username (ie. remove any leading and/or 
+    # trailing space - aka.: whitespace)
     username=`echo $username | sed 's/ //g'` 
     
     # TODO: Trim the users' firstname/prenom
@@ -47,7 +48,6 @@ function create_user_macos {
     # TODO: Do nothing if user already exists
 
     # Creating a new user on macOS... 
-    # TODO: Create a home directory for this new user (ie. NFSHOMEDIRECTORY) 
     
     # Unique ID: Add the `username` to list of Users w/ a unique `id`
     sudo dscl . -create "/Users/$username" UniqueID $id
@@ -57,10 +57,18 @@ function create_user_macos {
     sudo dscl . -create "/Users/$username" UserShell /bin/zsh
     # RealName: Add the user's fullname
     sudo dscl . -create "/Users/$username" RealName "$prenom $nom"
-    # PrimaryGroupID: Set the user's primary group id to 20 (custom)
+    # PrimaryGroupID: Make this user part of the local staff (non-admin account)
+    # by setting his/her primary group id to 20
     # TODO: Use the given `id` as primary group ID too ?
     sudo dscl . -create "/Users/$username" PrimaryGroupID 20 
-    
+    # NFSHomeDirectory: Create a home directory for this user
+    sudo dscl . -create "/Users/$username" NFSHomeDirectory "/Users/$username"
+    # Create the user's home directory, just in case `dscl` doesn't create one.
+    sudo mkdir -p "/Users/$username"   
+    #  making this user the owner of the his/her home directory...  
+    #  It just makes sense, doesn't it? LOL
+    sudo chown "${username}:staff" "/Users/$username"
+
     # If this user's role is 'Admin'...
     if [[ $role == 'Admin' ]]; then
         # ...make him/her a 'sudoer'(ie. add the user to the 'admin' group)

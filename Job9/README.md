@@ -89,7 +89,7 @@ Not Yet ;)
 - [ ] Create and **admin_list** array.
 - [ ] Create a **create_user** function that can create a user on Debian and Ubuntu.
 - [ ] Create a **delete_user** function that can delete a user on Debian and Ubuntu.
-- [ ] Create a home directory for this new user (ie. NFSHOMEDIRECTORY) 
+- [x] Create a home directory for newly created users (ie. NFSHOMEDIRECTORY) 
 - [ ] Use the given **`id`** as primary group ID too ? 
 - [ ] Add all users with `role = 'Admin'` to an **admin_list** array.
 - [ ] Print out the total number of users created 
